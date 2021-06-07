@@ -1,0 +1,20 @@
+
+<%- include("./layout/header") %>
+
+<a href="/" type="button" class="btn btn-secondary">Go Back</a>
+
+ 
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+           
+          <h5 class="card-title"><%= result.title %>></h5>
+          <p class="card-text"><%= result.article %></p>
+          <a href="/edit/article/" <%= result.article %> class="card-link">Edit Article</a>
+          <a href=/delete/article/ <%=  result.id %> class="card-link"> Delete</a>
+        </div>
+      </div>
+    
+  
+
+
+<%- include("./layout/footer") %>
