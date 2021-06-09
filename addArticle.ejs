@@ -2,17 +2,17 @@
 
 <a href="/" type="button" class="btn btn-secondary">Go Back</a>
 
-    <form method="POST" action="/new/article" style="margin: 30px;">
+    <form method="POST" action="/FEED/:id" style="margin: 30px;">
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Title</label>
-        <input name="title" type="text" class="form-control" >
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input name="Name" type="text" class="form-control" >
         <% if (error && error.title) { %>
         <h1 style="color: crimson;"> <%= error.title.message %></h1>
         <% { %> 
       </div>
       <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Article</label>
-        <textarea name="article" class="form-control" rows="3"></textarea>
+        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+        <textarea name="Message" class="form-control" rows="3"></textarea>
         <% if (error && error.article) { %>
         <h1 style="color: crimson;"> <%= error.article.message %> </h1>
         <% { %> 

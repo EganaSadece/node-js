@@ -2,23 +2,23 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const articleSchema = new Schema ({
+const FEED  = new Schema ({
 
     title:{
         type: String, 
         required: true,
-        minLenght: [ 25, "title shoud be longer than 25"],
+        minLenght: [ 15, "title shoud be longer than 15"],
       
     },
     article:{
         type:String,
         required: true,
-        minLenght: [ 100, "title shoud be longer than 100"],
+        minLenght: [ 40, "title shoud be longer than 40"],
 
     }
 })
 
-const Article = mongoose.model("article", articleSchema);
+const Article = mongoose.model("FEED", FEED );
 
 module.exports = {
     Article

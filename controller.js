@@ -13,7 +13,7 @@ const addArticle = ( req, res ) => {
         res.render ("addArticle", {error:null} )
     }
     if (req.metod === "POST") {
-    const article = new Article (req.body);
+    const Message = new Article (req.body);
     article.save ()
     .then (results => res.redirect ("/")
     .catch ( err => res.render ("addArticle", {error: err.errors})))
