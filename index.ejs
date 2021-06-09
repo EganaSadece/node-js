@@ -1,0 +1,21 @@
+
+<%- include("./layout/header") %>
+
+<a href="/new/article" type="button" class="btn btn-secondary">Add Article</a>
+
+<% results.forEach (result => {%>
+ 
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <a href=/article/<%= result.id %> >
+          <h5 class="card-title"><%= result.title %>></h5></a>
+          <p class="card-text"><%= result.article %></p>
+          <a href="#" class="card-link">Card link</a>
+          <a href=/delete/article/<%=  result.id %> class="card-link"> Delete</a>
+        </div>
+      </div>
+    
+    <% }) %>
+
+
+<%- include("./layout/footer") %>
